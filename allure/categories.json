@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Assertion failures",
+    "matchedStatuses": ["failed"],
+    "traceRegex": ".*AssertionError.*"
+  },
+  {
+    "name": "Network issues",
+    "matchedStatuses": ["broken"],
+    "messageRegex": ".*(ConnectionError|Timeout|ReadTimeout).*"
+  }
+]
