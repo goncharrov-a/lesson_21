@@ -69,3 +69,15 @@ def test_create_post(title, body, user_id):
     assert payload["body"] == body
     assert payload["userId"] == user_id
     assert "id" in payload
+
+
+@tm4j("AE-T4")
+@jira_issues("AE-104")
+@microservice("Content")
+@allure.story("Negative check for demo defect")
+@allure.title("Should fail to demonstrate defect in Allure")
+@pytest.mark.regress
+def test_demo_defect_for_allure():
+    response = steps.get_post(1)
+
+    assert response.status_code == 404
